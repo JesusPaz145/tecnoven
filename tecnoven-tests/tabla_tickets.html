@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<div>
+	<h2>configuracion_agendar_tickets</h2>
+	<table>
+		<tr>
+			<th>nombre</th>			<th>Descripcion</th>		<th>empresa</th>		<th>sucursal</th>		<th>usuario</th>		<th>fecha</th>		<th>ip_estacion</th>
+		</tr>
+		<tr>
+	<td>Oficina</td>			<td>Oficina</td>			<td>tecnoven</td>	<td>maracaibo</td>		<td>lvilchez</td>	<td>2022-05-13</td>	<td>192.168.55.20</td>
+		</tr>
+	<tr><td>Cliente</td>			<td>Cliente</td>			<td>tecnoven</td>	<td>maracaibo</td>		<td>lvilchez</td>	<td>2022-05-13</td>	<td>192.168.55.20</td>
+		</tr>
+	<tr><td>Via Telefonica</td>	<td>Via Telefonica</td>	<td>tecnoven</td>	<td>maracaibo</td>		<td>lvilchez</td>	<td>2022-05-13</td>	<td>192.168.55.20</td>
+		</tr>
+	<tr><td>Presencial</td>		<td>Presencial</td>		<td>tecnoven</td>	<td>maracaibo</td>		<td>lvilchez</td>	<td>2022-05-13</td>	<td>192.168.55.20</td>
+		</tr>
+		
+	</table>
+	</div>
+	<p>
+configuracion_asuntos_tickets
+	id	nombre									descripcion										empresa		sucursal	usuario		ip_estacion		fecha
+	1	Disponibilidad del Servicio x falla tec	Disponibilidad del Servicio por falla tecnica	tecnoven	maracaibo	lvilchez	192.168.55.20	2022-05-13
+	2	Lentitud o Baja velocidad del servicio	Lentitud o Baja velocidad del servicio			tecnoven	maracaibo	lvilchez	192.168.55.20	2022-05-13
+	3	Problemas con la antena o baja señal 	Problemas con la antena o baja señal de equipo 	tecnoven	maracaibo	lvilchez	192.168.55.20	2022-05-13
+	
+	
+configuracion_estado_tickets
+	id	nombre					descripcion							usuario		empresa		sucursal	ip_estacion		fecha
+	1	Cerrado					Ticket Cerrado y contestado 		lvilchez	tecnoven	maracaibo	192.168.55.70	2022-06-06
+	2	Abierto					para Utilizar un ticket de servicio	lvilchez	tecnoven	maracaibo	192.168.55.70	2022-06-06
+	3	Respuesta del Cliente	para usio de los clientes			lvilchez	tecnoven	maracaibo	192.168.55.70	2022-06-06
+	4	Respondido				cuando se responden los tickets		lvilchez	tecnoven	maracaibo	192.168.55.70	2022-06-06
+
+crear_documento_tickets
+	id	cod_cliente	titulo						Nro_externo	fecha_inicio	fecha_firma	duracion	estatus	tipo_plantilla		mostrar_logo	mostrar_cliente	empresa		sucursal	usuario		ip_estacion		fecha
+	9	V16081239	Contrato fibra optica 2022				2022-05-21		2023-05-21	16				A	plcontrato2022Z										tecnoven	maracaibo	lvilchez	192.168.55.70	2022-05-21
+	10	V18446947	Contrato fibra optica 2022				2022-05-21		2023-05-21	12 MESES	ACTIVO		  				1				1				tecnoven	maracaibo				192.168.55.70	2022-05-21
+	11	V27689246	Contrato fibra optica 2022				2022-05-21		2023-05-21	12 MESES	ACTIVO		   				1				1				tecnoven	maracaibo	lvilchez	192.168.55.70	2022-05-21
+		
+Departamento_tickets
+	id	nombre			descripcion		empresa		sucursal	ip_estacion		usuario		fecha
+	1	Soporte Tecnico	Soporte Tecnico	tecnoven	maracaibo	192.168.55.20	lvilchez	2022-05-13
+	2	Ventas			Ventas			tecnoven	maracaibo	192.168.55.20	lvilchez	2022-05-13
+	3	Quejas y Sugere	Quejas y Sugere	tecnoven	maracaibo	192.168.55.20	lvilchez	2022-05-13
+	
+notas_Tickets
+	id	id_notas	id_tickets	cod_cliente	agregar_respuestas	imagen	empresa		sucursal	usuario		ip_estacion		fecha
+ 	91	0000000021	0000000035	V8502126	anexo fotos					tecnoven	maracaibo	lvilchez	192.168.55.70	2022-06-28
+ 	95	0000000025	0000000035	V8502126	seguimos					tecnoven	maracaibo	lvilchez	192.168.55.70	2022-06-28
+ 	96	0000000026	0000000035	V8502126	se modifico el puerto del c	tecnoven	maracaibo	lvilchez	192.168.55.70	2022-06-28
+
+nuevos_tickets	
+	id	corre_ticket	cod_cliente	nombre_cliente		departamento	tecnico	asunto_tickets	nombre_solicitante	fecha_visita	turno	agendado_desde	enviar_email	archivo_adjunto	texto	estado	empresa		sucursal	usuario		ip_estacion		fecha	logo	fecha_cierre	id_cliente	id_servicio_cliente
+	54	0000000034		V179155415	IDALWIN JOSE SALAS 	4				atoro	1				Luis Vilchez		2022-06-28		mañana	1				1												tecnoven	maracaibo	lvilchez	192.168.55.70	2022-06-28		2022-06-28		0			0
+	55	0000000035		V8502126	ALEXANDRA CHIERA	4				eabreu	30				Luis Vilchez		2022-06-28		mañana	1				1										2		tecnoven	maracaibo	lvilchez	192.168.55.70	2022-06-28		2022-06-28		0			0
+	56	0000000036		V19670701	JOSE PIRELA SANTA 	4				lgarcia	30				Albenis Piñero		2022-06-28		mañana	1				1										2		tecnoven	maracaibo	lvilchez	192.168.55.70	2022-06-28		2022-06-28		0			0
+	</p>
+		
+</body>
+</html>

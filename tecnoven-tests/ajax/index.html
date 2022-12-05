@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Ajax</title>
+    <script>
+        var peticionHTTP;
+        function inicializar_XHR() {
+            if (window.XMLHttpRequest) {
+                peticionHTTP = new XMLHttpRequest();
+            }
+                else{ peticionHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+                }
+            }
+
+        function realizarPeticion(url, metodo, funcion)
+            {
+                //definir una funcion de como actuar:
+                peticionHTTP.onReadyStateChange = funcion;
+                //Realizar la peticion:
+                peticionHTTP.open(metodo, url, true);
+                peticionHTTP.send(null);
+            }
+        
+        function DescargarArchivo() {
+            realizarPeticion('archivo.txt', 'GET', funcActuadora);
+        }
+        function funcActuadora(){
+            if (peticionHTTP.readyState == 4) {
+
+            }
+        }
+            realizarPeticion('archivo.txt', 'GET', funcActuadora);
+        window.onReady = DescargarArchivo;  
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

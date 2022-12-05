@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset="utf-8" />
+  
+  <title><!--SC_PAGE_TITLE--></title>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="form/css/form01.css" />
+  <link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css" />  
+  <link rel="stylesheet" type="text/css" href="libs/font-awesome/css/font-awesome.min.css" /> 
+  <script type="text/javascript" src="form/js/jquery-1.10.2.min.js"></script>  
+  <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="libs/css/styles.css">
+</script>
+  <!--SC_PAGE_CHARSET-->
+</head>
+<body>
+<div class="container">
+
+<div class="row">
+    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    	<form role="form" {SC_FORM_ATTR}>
+		<!--SC_FORM_HIDDEN-->
+			<h2>Sign up</small></h2>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input type="text" name="premio" {SC_FIELD_INFO_name} id="premio" class="form-control input-lg {SC_FIELD_CLASS}" placeholder="Premio" tabindex="1">
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input type="int" name="cantidad" {SC_FIELD_INFO_last_name} id="cantidad" class="form-control input-lg {SC_FIELD_CLASS}" placeholder="Cantidad" tabindex="2">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
+				
+			</div>
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6"><input type="submit" value="Register" class="btn btn-primary btn-block btn-lg {SC_FIELD_CLASS}" tabindex="7"></div>
+				<div class="col-xs-12 col-md-6"><a href="#" class="btn btn-success btn-block btn-lg">Sign In</a></div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="t_and_c_m" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<input type="submit" class="close" data-dismiss="modal" aria-hidden="true" value="×"/>
+				<h4 class="modal-title" id="myModalLabel">Terms & Conditions</h4>
+			</div>
+			<div class="modal-body">
+                            <p> Welcome to Step by Step	
+                        </div>
+			<div class="modal-footer">
+				<input type="button" class="btn btn-primary" data-dismiss="modal" {SC_FORM_SUBMIT_CALL} value="I agree"/>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+</div>
+  
+<div class="alert-message negative">
+	<span class="message"></span>
+	<span class="close">&times;</span>
+</div>
+
+<!--SC_JS_LIB-->
+<script type="text/javascript" src="{SC_LIB_CURRENT}libs/js/error.js"></script>
+</body>
+</html>
