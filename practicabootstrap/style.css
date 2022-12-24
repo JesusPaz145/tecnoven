@@ -1,0 +1,22 @@
+.col{
+    border: 1pt blue solid;
+}
+.logo{
+    padding: 8px;
+    background: #337ab7;
+    }
+.barra_lateral {
+    color:red;
+    }
+.menu{
+    color: blue;
+}
+.titulo{
+    text-align: right;
+    font-size: larger;
+    font-weight: 700;
+}
+#footer{
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5472);
+    color: white;
+}
