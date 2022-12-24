@@ -1,0 +1,314 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="panel_cliente.css" />
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /> 
+            <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+            <link rel="stylesheet" type="text/css" href="https://morrisjs.github.io/morris.js/css/morris.css" />
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+            <script type="text/javascript" src="panel_cliente.js"></script>
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+            <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+            <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <title>Local App</title>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+<body>
+    <form {SC_FORM_ATTR}  hidden= "true">
+        <INPUT {SC_FIELD_INFO_mensaje_cliente} type="hidden" />
+        <INPUT {SC_FIELD_INFO_imagen} type="hidden" />
+        <INPUT {SC_FIELD_INFO_saldo} type="hidden" />
+        <INPUT {SC_FIELD_INFO_saldo_bs} type="hidden" />
+        <INPUT {SC_FIELD_INFO_Tarea} type="hidden" />
+        <INPUT {SC_FIELD_INFO_nombre} type="hidden" />
+        <INPUT  hidden= "true" class="{SC_FIELD_CLASS}" />
+        <!--SC_FIELD_INI_id_cliente--> 
+        <!--SC_FIELD_LABEL_id_cliente-->
+        <INPUT hidden= "true" {SC_FIELD_INFO_id_cliente} type="hidden"   />
+        <!--SC_FIELD_END_id_cliente-->
+        <INPUT hidden= "true" type="BUTTON" value="Submit" {SC_FORM_SUBMIT_CALL} />
+        <!--SC_FORM_HIDDEN-->
+    </form>
+<br />
+<br />
+    <header class="navbar-fixed-top">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="pull-left">
+                    <div class="pull-left logo text-center" style="margin-right: 5px;margin-bottom: 5px;">
+                        <span><!--SC_FIELD_LABEL_imagen--></span>
+                    </div>
+                    <h5 class="pull-rigth" style = 'text-transform: capitalize'>Bienvenido <!--SC_FIELD_LABEL_nombre--></h5>
+                    
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="side-menu">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <div class="brand-wrapper">
+                <div class="brand-name-wrapper">
+                </div>
+                </div>
+            </div><!-- Main Menu -->
+            <div class="side-menu-container">
+            <ul class="nav navbar-nav">
+                <li>
+                <a href="../facturas/"><span class="glyphicon glyphicon-send"></span> Facturas</a>
+                </li>
+                <li class="active">
+                    <a href="../pago_en_linea/"><span class="glyphicon glyphicon-plane"></span> Pagar en Linea</a>
+                </li>
+                <li>
+                    <a href="../registrar_pago/"><span class="glyphicon glyphicon-cloud"></span> Registrar Pago</a>
+                </li>
+                <li>
+                    <a href="../cuenta_numeros/"><span class="glyphicon glyphicon-cloud"></span> Cuentas Bancarias</a>
+                </li><!-- Dropdown-->
+                <li class="panel panel-default" id="dropdown">
+                    <a data-toggle="collapse" href="#dropdown-lvl2">
+                        <span class="glyphicon glyphicon-user"></span> Soporte <span class="caret"></span>
+                    </a> <!-- Dropdown level 1 -->
+                <div class="panel-collapse collapse" id="dropdown-lvl2">
+                    <div class="panel-body">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="../grid_mis_tickets">Tickets</a>
+                            </li>
+                            <li>
+                                <a href="#">Chatear con un Tecnico</a>
+                            </li>
+                        </ul>
+                        <li class="panel panel-default" id="dropdown">
+                <a data-toggle="collapse" href="#dropdown-lvl1"><span class="glyphicon glyphicon-user"></span> Servicio <span class="caret"></span></a> <!-- Dropdown level 1 -->
+                    <div class="panel-collapse collapse" id="dropdown-lvl1">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="#">Estatus de Nodo</a>
+                                </li>
+                                <li>
+                                    <a href="../speedtest/">Speed test</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- /.navbar-collapse -->
+        </nav>
+        </div><!-- Main Content -->
+
+
+        <div class="container-fluid">
+            <div class="side-body">
+            <div class="page-title-box">
+                <h4 class="page-title pull-left">Inicio</h4>
+                    <ol class="breadcrumb pull-right">
+                        <li>
+                            <a href="../menu/">home</a>
+                        </li>
+                        <li class="active">Dashboard</li>
+                        </ol>
+                <div class="clearfix">
+                </div>
+            </div>
+
+
+        <div class="row">
+            <div class="col-lg-12 col-sm-12">
+
+
+                <div class="row">
+                <div class="col-sm-6">
+                    <div class="panel panel-primary" >
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-9">
+                                    <div class="huge">
+                                        0.00
+                                    </div>
+                                <div>
+                                    0 Bolivares
+                                </div>
+                                </div>
+                                <div class="col-xs-3 text-right">
+                                    <i class="fa fa-dollar fa-5x"></i>
+                                </div>
+                            </div>
+                    </div>
+                    <a href="../Facturas/">
+                    <div class="panel-footer">
+                        <span class="pull-left">Ver Detalle</span>
+                        <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div></a>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                <div class="col-sm-6">
+                    <a href="../pago_en_linea/">
+                    <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-9">
+                                <div class="huge">
+                                    Pagar
+                                </div>
+                                <div>
+                                    Con tu tarjeta de debito o credito
+                                </div>
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                <i class="fa fa-credit-card fa-5x"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="../pago_en_linea/">
+                    <div class="panel-footer">
+                        <span class="pull-left">Pagar en Linea</span> 
+                        <span class="pull-right">
+                        <i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                            </div></a>
+                        </div>
+                    </div>
+
+                
+                
+                <div class="col-sm-6">
+                  <a href="../registrar_pago/">
+                  <div class="panel panel-red">
+                    <div class="panel-heading">
+                      <div class="row">
+                        <div class="col-xs-9">
+                          <div class="huge">
+                            Registrar
+                          </div>
+                          <div>
+                            Carga pagos realizados en otras plataformas
+                          </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                          <i class="fa fa-file-text fa-5x"></i>
+                        </div>
+                      </div>
+                                         
+                    </div><a href="../registrar_pago/">
+                    
+                    
+                    <div class="panel-footer">
+                      <span class="pull-left">Registrar Pago</span> <span class="pull-right"><i class=
+                      "fa fa-arrow-circle-right "></i></span>
+                      <div class="clearfix"></div>
+                    </div></a>
+                  </div>
+                </div>
+                
+                                 <div class="col-sm-6">
+                                   <a href="../registrar_pago/">
+                  <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                      <div class="row">
+                        <div class="col-xs-9">
+                          <div class="huge">
+                            Servicio
+                          </div>
+                          <div>
+                            Notificaciones y Alertas de los servicios contratados
+                          </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                          <i class="fa fa-signal fa-5x"></i>
+                        </div>
+                      </div>
+                      
+                      
+                    </div><a href="../registrar_pago/">
+                    
+                    
+                    <div class="panel-footer">
+                      <span class="pull-left">Ver Notificaciones</span> <span class="pull-right"><i class=
+                      "fa fa-arrow-circle-rightt"></i></span>
+                      <div class="clearfix"></div>
+                    </div></a>
+                  </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                
+                 <div class="col-sm-6">
+                  <a href="../chat_soporte">
+                  <div class="panel panel-red">
+                    <div class="panel-heading">
+                      <div class="row">
+                        <div class="col-xs-9">
+                          <div class="huge">
+                            Soporte
+                          </div>
+                          <div>
+                            Area de Chat y Soporte
+                          </div>
+                        </div>
+                        <div class="col-xs-3 text-right">
+                          <i class="fa fa-cogs fa-5x"></i>
+                        </div>
+                      </div>
+                    </div><a href="../chat_soporte">
+                    <div class="panel-footer">
+                      <span class="pull-left">Reportar un Problema</span> <span class="pull-right"><i class=
+                      "fa fa-arrow-circle-right"></i></span>
+                      <div class="clearfix"></div>
+                    </div></a>
+                  </div>                            
+  
+     
+  
+            
+            
+            
+            
+             
+            
+    
+        
+        
+
+        
+        
+            
+            
+           
+
+
+          
+              
+      
+
+      
+        <div class="side-footer">
+          <div class="footer text-center">
+            Mensaje viejo: Power By 2022 <a target="_blank" href="https://icarosoft.com/"> IcaroSoft </a>
+          </div>
+        </div>
+        </a>  
+        </div>
+        </div>
+        </div>
+        <footer class="piedepagina2">
+          Footer
+        </footer>
+
+</body>
+  
+  
+ 
+</html>
