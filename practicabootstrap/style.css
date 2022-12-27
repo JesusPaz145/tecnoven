@@ -1,28 +1,95 @@
+/* General */
+body {
+    background-color: #F8E3ED !important;
+    color: #664B3B !important;
+
+}
 .col{
-    border: 1pt blue solid;
+    border: 1pt palevioletred solid;
 }
-.logo{
-    padding: 8px;
-    background: #337ab7;
-    }
-.barra_lateral {
-    color:red;
-    }
-.menu{
-    color: blue;
-}
-.titulo{
-    text-align: right;
-    font-size: larger;
+/* /General */
+
+/* Header */
+.logo {
+    color:#664B3B !important;
     font-weight: 700;
 }
+
+#header img {
+    width: 80px;
+}
+#header a {
+    color: #10C5C6;
+}
+
+/* /Header */
+
+/* Barra Lateral */
+.barra_lateral{
+    background-color: #10C5C6;
+   }
+.barra_lateral a {
+    color: #664B3B;
+}
+.menu{
+    color: #10C5C6;
+    
+}
+.recetas{
+    padding: 8px;
+    background-color: #D55592;
+    color: white;
+    }
+/* /Barra Lateral */
+
+/* Footer */
 #footer{
-    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5472);
+    background: linear-gradient(90deg, #D55592, #D55592, #10C5C6);
     color: white;
 }
 #footer a {
     color: white;
 }
-#header img {
-    width: 120px;
+/* /Footer */
+
+/* Eje Central Main */
+.titulo{
+    text-align: right;
+    font-size: larger;
+    font-weight: 700;
 }
+#main .carousel-inner img {
+    height: 70vh;
+    object-fit: cover;
+    filter: grayscale(60%);
+}
+
+.carousel.carousel-fade .carousel-item {
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out .7s;
+}
+
+.carousel.carousel-fade .carousel-item.active {
+    opacity: 1 !important;
+}
+/* /Eje Central */
+
+#carousel {
+    position: relative;
+}
+#carousel .overlay {
+    position: absolute;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color:white;
+    z-index: 1;
+}
+#carousel .overlay .container, 
+#carousel .overlay .row {
+    height: 100%;
+}
+
