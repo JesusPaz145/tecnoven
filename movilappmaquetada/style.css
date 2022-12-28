@@ -1,0 +1,73 @@
+
+
+.esqueleto {
+    border: 2pt solid blue
+}
+.feather {
+	width: 16px;
+	height: 16px;
+	vertical-align: text-bottom;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100;
+	padding: 16px 0;
+	box-shadow: inset -1px 0 0 rgba(0,0,0,0.1);
+}
+
+.sidebar-sticky {
+	position: relative;
+	top: 0;
+	height: calc(100vh - 48px);
+	padding-top: 0.5rem;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+	.sidebar-sticky {
+		position: -webkit-sticky;
+		position: sticky;
+	}
+}
+
+.navbar-brand {
+	display: block;
+	height: 48px;
+	padding: 0.5rem 1rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	background: #444;
+	color: #fff;
+	border-radius: 30px;
+	transition: box-shadow 0.5s;
+}
+
+.navbar-brand:hover {
+	box-shadow: inset 250px 0 0 0 #121212;
+	color: #efefef;
+	transition: box-shadow 0.5s;
+}
+
+.sidebar .nav-link {
+	font-weight: 500;
+	color: #333;
+}
+
+.sidebar .nav-link .feather {
+	margin-right: 4px;
+	color: #999;
+}
+
+.sidebar .nav-link.active {
+	color: #007bff;
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+	color: inherit;
+}
