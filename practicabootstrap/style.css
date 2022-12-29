@@ -25,14 +25,10 @@ body {
 /* /Header */
 
 /* Barra Lateral */
-.barra_lateral{
-    background-color: #10C5C6;
-   }
-.barra_lateral a {
-    color: #664B3B;
-}
-.menu{
-    color: #10C5C6;
+
+.menu a{
+    color: #D55592;
+    
     
 }
 .recetas{
