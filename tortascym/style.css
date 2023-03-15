@@ -1,88 +1,73 @@
-/* General */
-body {
-    background-color: #F8E3ED !important;
-    color: #664B3B !important;
-
-}
-.col{
-    border: 1pt palevioletred solid;
-}
-/* /General */
-
-/* Header */
-.logo {
-    color:#664B3B !important;
-    
-}
-
-#header img {
-    width: 80px;
-}
-#header a {
-    color: #10C5C6;
-}
-
-/* /Header */
-
-/* Barra Lateral */
-
-.menu a{
-    color: #D55592;
-    
-    
-}
-.recetas{
-    padding: 8px;
-    background-color: #D55592;
-    color: white;
-    }
-/* /Barra Lateral */
-
-/* Footer */
-#footer{
-    background: linear-gradient(90deg, #D55592, #D55592, #10C5C6);
-    color: white;
-}
-/* #footer a {
-    color: white;
+html {
+    background-color: #fdd2e1;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 10px solid #fdd2e1;
+  }
+  
+  body {
+    background-color: #fff;
+    width: 80%;
+    margin: 0 auto;
+    padding:0px;
+    box-sizing: border-box;
+  }
+a {
+    color: #6d3a35;
     text-decoration: none;
-} */
-/* /Footer */
+  }
+  a:hover {
+    color: #fdd2e1;
+  }
+/* Fondo blanco para el header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+  }
 
-/* Eje Central Main */
+/* Fondo rosa para el menu */
 
-#main .carousel-inner img {
-    height: 70vh;
-    object-fit: cover;
-    filter: grayscale(60%);
-}
+.navbar {
+    background-color: #fdd2e1;
+    margin-left: -20px;
+    margin-right: -12px;
+  }
+  nav {
+    background-color: #fdd2e1;
+    padding: 10px;
+  }
 
-.carousel.carousel-fade .carousel-item {
-    display: block;
-    opacity: 0;
-    transition: opacity ease-out .7s;
-}
+/* Alinear logo y slogan verticalmente */
+.logo img {
+    height: 150px;
+    width: 150px;
+  }
 
-.carousel.carousel-fade .carousel-item.active {
-    opacity: 1 !important;
-}
-/* /Eje Central */
+/* Estilo para el nombre de la página */
+.page-title {
+    font-family: 'Brusher', cursive;
+    font-size: 64px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #6d3a35;
+  }
+  
+  /* Estilo para el slogan */
+  .slogan {
+    font-size: 22px;
+    margin-top: 0;
+    color: #6d3a35;
+  }
 
-#carousel {
-    position: relative;
-}
-#carousel .overlay {
-    position: absolute;
-    top: 0; 
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color:white;
-    z-index: 1;
-}
-#carousel .overlay .container, 
-#carousel .overlay .row {
-    height: 100%;
-}
 
+/* Definir ancho máximo de las imágenes del carrusel */
+.carousel-item img {
+    max-width: 40%;
+    max-height: 40%;
+    margin: 0 auto; /* Centrar horizontalmente */
+  }
+
+  footer {
+    background-color: #fdd2e1;
+  }
